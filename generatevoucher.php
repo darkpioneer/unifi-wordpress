@@ -1,7 +1,7 @@
 <?php
 //Generate vouchers for use with Wordpress / Unifi intergration
 
-require_once("config.php")
+require_once("config.php");
 function gencode($quantity, $minuets)
 {
     global $dbServer;
@@ -14,12 +14,12 @@ function gencode($quantity, $minuets)
     
     for ($i = 1; $i <= $quantity; $i++) {
         $random = substr(number_format(time() * rand(),0,'',''),0,10);
-        $t = time()
+        $t = time();
         while (checkdb($random)){
             $random = substr(number_format(time() * rand(),0,'',''),0,10);
-            $t = time()
+            $t = time();
         }
-               mysql_query('INSERT INTO vouchers (code, duration, create-time) VALUES ($random, $minuets, $t)')
+               mysql_query('INSERT INTO vouchers (code, duration, create-time) VALUES ($random, $minuets, $t)');
     }
 }
 
