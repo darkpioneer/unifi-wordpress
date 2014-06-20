@@ -5,7 +5,6 @@
 
 if ($_GET['id'])			//check the user came here via a Unifi AP
 {
-  $_SESSION['id'] = $_GET['id'];	//user's mac address
 }
 else
 {
