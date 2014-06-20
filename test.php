@@ -1,5 +1,5 @@
 <?php
-$count = "5";
+$count = "1";
 
 for ($i = 1; $i <= $count; $i++) {
 //    echo "---" . "\n";
@@ -10,4 +10,7 @@ for ($i = 1; $i <= $count; $i++) {
 //    echo substr($random,0,5) . " - " . substr($random,5,10) . "\n";
 }
 print_r($result);
+$t = time();
+print_r($t);
+echo time();
 ?>
