@@ -19,7 +19,7 @@ function gencode($quantity, $minuets)
             $random = substr(number_format(time() * rand(),0,'',''),0,10);
             $t = time();
         }
-               mysql_query('INSERT INTO vouchers (code, duration, create-time) VALUES ($random, $minuets, $t)');
+               mysql_query('INSERT INTO vouchers (code, duration) VALUES ('.$random.', '.$minuets.')') or die(mysql_error());
     }
 }
 
